@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {{block  "styles" .}}
+    <style type="text/css">
+        table.gridtable {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+        }
+        table.gridtable th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #dedede;
+        }
+        table.gridtable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+    </style>
+    {{end}}
+</head>
+<body>
+Hello：
+<br>
+<br>
+<br>
+今天的交易所数据在附件里面，请查收，谢谢
+<br>
+<br>
+Please check the attachment in this email for the daily exchange statistics. Thanks.
+<br>
+<br>
+<br>
+<br>
+<table class="gridtable">
+    <tr>
+        <th>用户注册人数（number of users）</th>
+        <th>24h新增用户数（24h new user ）</th>
+        <th>24h真实成交额（24h trading volume）</th>
+    </tr>
+    <tr style="text-align: center;">
+        <td>{{.TotalUser}}</td>
+        <td>{{.NumUser}}</td>
+        <td>{{.Volume}}</td>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+发送时间：{{.SendDate}}
+<br>
+<br>
+Sent time：{{.Date}}
+<br>
+</body>
+</html>
